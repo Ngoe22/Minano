@@ -1,0 +1,590 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =================================== */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.6rem;
+}
+
+.body-wrap {
+    width: min(95vw, 1000px);
+    margin: 30px auto;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.warning-red {
+    background-color: rgba(234, 68, 53, 0.9) !important ;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(180, 180, 180);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(180, 180, 180);
+}
+
+/* ============================================================================================ */
+
+.textbox {
+    background-color: rgba(255, 0, 0, 0.315);
+    height: 40px;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1px; */
+    max-height: 60vh;
+}
+
+.keyboard-row {
+    display: flex;
+    /* gap: 1px; */
+}
+
+.keyboard-switch,
+.keyboard-space,
+.keyboard-delete,
+.keyboard-done,
+.keyboard-letter {
+    height: max(35px, 6vw);
+    width: max(35px, 100vw);
+
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 3px; */
+    background-color: rgba(0, 128, 0, 0.324);
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid rgb(226, 226, 226);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.keyboard-space {
+    width: 50%;
+    background-color: rgb(66, 133, 244, 0.5);
+}
+
+.keyboard-delete,
+.keyboard-done,
+.keyboard-switch {
+    width: auto;
+    flex-grow: 2;
+    padding: 5px;
+}
+
+.keyboard-delete {
+    background-color: rgba(234, 68, 53, 0.7);
+}
+/* .keyboard-done {
+    background-color: rgb(66, 133, 244, 0.5);
+} */
+.keyboard-switch {
+    background-color: rgb(251, 188, 5, 0.5);
+}
+
+#keyboard {
+    position: fixed;
+    z-index: 98;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+    background-color: white;
+}
+
+/* ============================================================================================ */
+
+.minano-2 {
+    margin: 0 20px;
+}
+
+.Minano-card {
+    margin-bottom: 20px;
+    padding: 10px 7px;
+    border-radius: 3px;
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(159, 159, 159, 0.1); */
+}
+
+.Minano-card-body {
+    max-height: 50vh;
+    overflow: auto;
+    /* overscroll-behavior: contain; */
+    padding-right: 3px;
+    /* background-color: white; */
+}
+
+/* minano */
+.Minano-header-img,
+.Minano-Q-img {
+    display: inline-block;
+    object-fit: contain;
+    max-height: 850px;
+    width: min(100%, 800px);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.Minano-header-img.showFull {
+    display: block;
+    position: fixed;
+    width: min(800px, 100vw);
+    max-height: 100vh;
+
+    right: 50%;
+    bottom: 50%;
+    translate: 50% 50%;
+    box-shadow: 0px 0px 0 100vh rgba(0, 0, 0, 0.7);
+    z-index: 90;
+}
+
+.Minano-header-audio {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    /* margin: auto; */
+    margin-bottom: 30px;
+}
+
+.Minano-header-text {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.Minano-QA {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+/* .Minano-QA:nth-child(even) {
+    background-color: rgb(191, 255, 178);
+} */
+
+.Minano-Q {
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.Minano-A {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.Minano-A-op {
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-weight: 600; */
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    min-width: 50px;
+    text-align: center;
+}
+.Minano-A-op:has(:checked) {
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    background-color: rgb(113, 203, 113);
+    color: white;
+}
+
+.Minano-input-box {
+    width: 100%;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* padding: 1; */
+}
+
+.Minano-text-box {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    line-height: 1.5;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.Minano-open-keyboard {
+    display: block;
+    background: none;
+    border: none;
+    height: 35px;
+    width: 45px;
+    padding: 5px;
+    background-image: url(../ASSESTS/icon/keyboard-solid.svg);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.keyboard-active {
+    background-color: rgba(0, 128, 0, 0.3);
+    color: white;
+    /* min-width: 100%; */
+}
+
+/* ============================================================================================ */
+
+.exam-btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 10px 20px;
+}
+
+.exam-btn,
+.captureBtn {
+    background: none;
+    border: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    transition: 0.2;
+
+    margin-bottom: 20px;
+}
+
+.exam-btn.red {
+    background-color: rgba(247, 219, 96, 0.9);
+}
+.exam-btn.green,
+.captureBtn {
+    background-color: rgba(113, 203, 113, 0.9);
+    /* background-color: rgba(83, 185, 253, 0.6); */
+}
+
+.captureBtn:hover {
+    box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================================================ */
+
+/* #exp {
+
+} */
+
+.exp-filter {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 20px auto;
+    transition: 0.3s;
+}
+.exp-filter:hover {
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* .exp-active {
+    background-color: tomato;
+} */
+
+.exp-filter-levels {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.exp-filter-level {
+    border: 1px solid gainsboro;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.exp-filter-level.exp-active {
+    background-color: rgba(0, 128, 0, 0.6);
+    color: white;
+}
+
+.exp-filter-cards {
+    display: flex;
+    overflow: hidden;
+}
+.exp-filter-card {
+    display: none;
+    width: 100%;
+    flex-shrink: 0;
+}
+.exp-filter-card.exp-active {
+    display: block;
+}
+
+.exp-filter-lessons,
+.exp-filter-types {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.exp-filter-lesson,
+.exp-filter-type {
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.exp-filter-lesson:has(:checked),
+.exp-filter-type:has(:checked) {
+    background-color: rgba(0, 128, 0, 0.6);
+    color: white;
+}
+
+.exp-filter-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.exp-filter-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    min-width: 50px;
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+}
+.exp-cancel {
+    background-color: rgba(234, 68, 53, 0.7);
+}
+.exp-submit {
+    background-color: rgba(0, 128, 0, 0.6);
+}
+
+/* ============================================================================================ */
+/* MODAL */
+
+.shareModal {
+    position: fixed;
+    inset: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.shareModal-box {
+    padding: 15px 15px;
+    border-radius: 10px;
+    background-color: white;
+    min-width: 80%;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shareModal-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.shareModal-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+.shareModal-cancel,
+.shareModal-submit {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    min-width: 50px;
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+}
+.shareModal-cancel {
+    background-color: rgba(234, 68, 53, 0.7);
+}
+.shareModal-submit {
+    background-color: rgba(0, 128, 0, 0.6);
+}
+
+/*  */
+.exp-exam {
+    width: 98%;
+    margin: 20px auto;
+}

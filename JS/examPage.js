@@ -194,7 +194,6 @@ MinanoExamPage.filterRender();
 const captureBtn = Exam.makeAnode(`captureBtn`, `button`);
 captureBtn.textContent = `宿題を撮る（しゅくだいをとる）📷`;
 
-
 captureBtn.addEventListener("click", async () => {
     const target = document.querySelector(".exp-exam"); // 🔥 sửa chỗ này
 
@@ -219,39 +218,45 @@ captureBtn.addEventListener("click", async () => {
     imgList.forEach((e) => (e.style.display = ""));
     fullHeightList.forEach((e) => (e.style.maxHeight = ""));
 
-    const halfHeight = Math.floor(canvas.height / 2);
+    console.log(canvas.height);
 
-    const newCanvas = document.createElement("canvas");
-    const ctx = newCanvas.getContext("2d");
+    if (canvas.height > 1800) {
+        const halfHeight = Math.floor(canvas.height / 2);
 
-    newCanvas.width = canvas.width * 2;
-    newCanvas.height = halfHeight;
+        var newCanvas = document.createElement("canvas");
+        const ctx = newCanvas.getContext("2d");
 
-    // phần trên
-    ctx.drawImage(
-        canvas,
-        0,
-        0,
-        canvas.width,
-        halfHeight,
-        0,
-        0,
-        canvas.width,
-        halfHeight,
-    );
+        newCanvas.width = canvas.width * 2;
+        newCanvas.height = halfHeight;
 
-    // phần dưới
-    ctx.drawImage(
-        canvas,
-        0,
-        halfHeight,
-        canvas.width,
-        halfHeight,
-        canvas.width,
-        0,
-        canvas.width,
-        halfHeight,
-    );
+        // phần trên
+        ctx.drawImage(
+            canvas,
+            0,
+            0,
+            canvas.width,
+            halfHeight,
+            0,
+            0,
+            canvas.width,
+            halfHeight,
+        );
+
+        // phần dưới
+        ctx.drawImage(
+            canvas,
+            0,
+            halfHeight,
+            canvas.width,
+            halfHeight,
+            canvas.width,
+            0,
+            canvas.width,
+            halfHeight,
+        );
+    } else {
+        var newCanvas = canvas;
+    }
 
     const link = document.createElement("a");
     link.download = "merged.jpg";

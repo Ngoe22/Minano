@@ -1436,72 +1436,8 @@ const N5_data = {
         lesson19: [
             {
                 MQ: { text: `問題1 )`, img: `./EXAM/N5/19/BUNPO/1.png` },
-                Each: [
-                    {
-                        Q: {
-                            text: `1 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `2 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `3 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `4 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `5 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `6 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `7 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `8 )`,
-                        },
-                        CA: `a`,
-                        O: [],
-                        type: `input`,
-                    },
-                ],
+                lazyInput: 8,
+                Each: [],
             },
             {
                 MQ: { text: `問題2 )`, img: `./EXAM/N5/19/BUNPO/2.png` },
@@ -1605,48 +1541,8 @@ const N5_data = {
             },
             {
                 MQ: { text: `問題3 )`, img: `./EXAM/N5/19/BUNPO/3.png` },
-                Each: [
-                    {
-                        Q: {
-                            text: `1 )`,
-                        },
-                        CA: ``,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `2 )`,
-                        },
-                        CA: ``,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `3 )`,
-                        },
-                        CA: ``,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `4 )`,
-                        },
-                        CA: ``,
-                        O: [],
-                        type: `input`,
-                    },
-                    {
-                        Q: {
-                            text: `5 )`,
-                        },
-                        CA: ``,
-                        O: [],
-                        type: `input`,
-                    },
-                ],
+                lazyInput: 5,
+                Each: [],
             },
             {
                 MQ: { text: `問題4 )`, img: `./EXAM/N5/19/BUNPO/4.png` },

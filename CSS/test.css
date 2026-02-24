@@ -315,6 +315,10 @@ body {
     border-bottom: 1px solid gainsboro;
     margin-bottom: 15px;
     font-size: 1.8rem;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 /* .Minano-QA:nth-child(even) {
     background-color: rgb(191, 255, 178);
@@ -324,13 +328,20 @@ body {
     line-height: 1.5;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    flex-shrink: 0;
+}
+.Minano-Q.share-line {
+    width: auto;
+    flex-shrink: 1;
 }
 
 .Minano-A {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    flex-grow: 1;
 }
 .Minano-A-op {
     padding: 5px 10px;

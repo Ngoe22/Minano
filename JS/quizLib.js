@@ -33,16 +33,15 @@ class QuizLib {
                 let AHtml = ``;
                 let QHtml = ``;
                 for (let j = 1; j <= lazyInputNum; j++) {
-                    QHtml = `<p class="${CLN}-text">${j} )</p>`;
+                    QHtml = `<p class="${CLN}-text ">${j} )</p>`;
                     AHtml = `<div class="${CLN}-input-box"><p class="${CLN}-text-box"></p><button class=" ${CLN}-open-keyboard  call-the-keyboard"></button></div>`;
 
                     bodyHtml += `<div class="${CLN}-QA">
-                        <div class="${CLN}-Q"> ${QHtml}  </div>
+                        <div class="${CLN}-Q share-line"> ${QHtml}  </div>
                         <div class="${CLN}-A"> ${AHtml}  </div>
                     </div>`;
                 }
             }
-
 
             // specific
             for (let j in sideQA) {

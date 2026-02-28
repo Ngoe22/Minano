@@ -248,7 +248,7 @@ const N5_data = {
 
             {
                 MQ: {
-                    img: `https://havico.edu.vn/wp-content/uploads/2021/01/minna-bai-20-nghe-tasuku-1.jpg`,
+                    img: `./EXAM/N5/20/CHOUKAI/2.png`,
                     audio: `https://havico.edu.vn/wp-content/uploads/2021/01/Bai-20Track25.mp3`,
                     text: ` 2 | なな子ちゃんは　絵日記を　かきました。きょうは　どんな　１日でしたか。`,
                 },

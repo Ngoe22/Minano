@@ -659,7 +659,7 @@ const N5_data = {
             {
                 MQ: {
                     audio: `https://havico.edu.vn/wp-content/uploads/2021/01/Bai-23Track37.mp3`,
-                    img: `https://havico.edu.vn/wp-content/uploads/2021/01/minna-bai-23-nghe-tasuku-1.jpg`,
+                    img: `https://havico.edu.vn/wp-content/uploads/2021/01/minna-bai-23-nghe-tasuku-2.jpg`,
                     text: ` 2 | マザーテレサは　いつ　何を　しましたか。`,
                 },
                 Each: [

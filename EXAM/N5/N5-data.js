@@ -1942,10 +1942,6 @@ const N5_data = {
                         type: `quiz`,
                     },
                     {
-                        O: [],
-                        type: `input`,
-                    },
-                    {
                         Q: { text: `2 )` },
                         O: [`行くとき`, `行くと`, `行って`],
                         type: `quiz`,
